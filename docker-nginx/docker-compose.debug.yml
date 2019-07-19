@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  docker-my-nginx:
+    image: docker-my-nginx
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080

@@ -1,0 +1,10 @@
+创建网路
+docker network create 
+-d bridge  驱动类型
+--subnet 172.28.0.0/16  子网络
+--ip-range 172.28.5.0/24  ip范围
+--gateway 172.28.5.254 网关
+alpine-net 网络名称
+
+
+使用docker-compose命令编排各个容器

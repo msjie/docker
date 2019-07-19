@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  part_one:        #服务名称
+    image: alpine  #镜像名称
+    container_name: alpine1  #容器名称
+    tty: true      
+    networks: 
+      - alpine-net
+  part_tow:
+    image: alpine
+    container_name: alpine2
+    tty: true
+    networks: 
+      - alpine-net    
+
+networks: 
+  alpine-net:
+    external: 
+      name: alpine-net #已存在的网络
+
+
+# 使用自定义网络跟系统默认网络区别
+#1.自定义网络，只要加入该网络的容器，可以使用容器名称进行访问。
+#
