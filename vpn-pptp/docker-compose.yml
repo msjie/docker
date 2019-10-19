@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  vpn-pptp:
+    image: mobtitude/vpn-pptp
+    ports:
+      - 1723:1723
+    volumes:
+      - "./chap-secrets:/etc/ppp/chap-secrets"
